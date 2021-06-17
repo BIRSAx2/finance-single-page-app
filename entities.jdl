@@ -1,0 +1,50 @@
+application {
+  config {
+    baseName finance
+    packageName dev.mouhieddine.finance
+    authenticationType jwt
+    prodDatabaseType mysql
+    devDatabaseType h2Memory
+    buildTool maven
+    clientFramework vue
+    enableTranslation false
+    nativeLanguage en
+    cacheProvider no
+  }
+  entities *
+}
+
+enum Currency {
+  EUR, USD, GBP
+}
+enum TransactionType {
+  INCOME, EXPENSE
+}
+entity Wallet {
+  name String required
+  currency Currency required
+  countTotal Boolean
+  color String
+  order Integer
+}
+entity Category {
+  name String required
+  color String
+  showStatistics Boolean
+}
+entity Transaction(transactions) {
+  description String
+  amount Double required
+  type TransactionType required
+  date Instant required
+}
+
+relationship OneToMany {
+  Wallet to Transaction{wallet required}
+  Category to Transaction {category required}
+}
+relationship ManyToOne {
+  Wallet{user(login)} to User
+  Category{user(login)} to User
+}
+dto * with mapstruct

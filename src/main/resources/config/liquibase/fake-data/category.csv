@@ -1,0 +1,11 @@
+id;name;color;show_statistics;user_id
+1;Auto;#dcfaf8;true;1
+2;Family;#e8deff;true;2
+3;Home pay;#FFCCD5;true;2
+4;Food;#ffc976;true;2
+5;Phone;#96f0ea;true;2
+6;Work;#b99cff;true;2
+7;Sport;#ffa51a;true;2
+8;Health;#51e5db;false;2
+9;Travel;#F64272;true;2
+10;Freelance;#8b5aff;true;2

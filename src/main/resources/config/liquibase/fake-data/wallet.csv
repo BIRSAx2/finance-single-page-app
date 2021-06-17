@@ -1,0 +1,4 @@
+id;name;currency;count_total;color;uaa_order;user_id
+1;Hype;EUR;true;#F64272;0;2
+2;Fineco;EUR;true;#8b5aff;1;2
+3;Unicredit;GBP;false;#74ebe3;2;2
